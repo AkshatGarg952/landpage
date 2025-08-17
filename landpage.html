@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVersus - Where Code Warriors Battle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Enhanced Cursor -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">CodeVersus</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#login">Join Arena</a></li>
+                <li class="nav-item"><a href="#leaderboard">Rankings</a></li>
+                <li class="nav-item"><a href="#features">Features</a></li>
+                <li class="nav-item"><a href="#how-it-works">Guide</a></li>
+                <li class="nav-item"><a href="#reviews">Stories</a></li>
+                <li class="nav-item"><a href="#contact">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="floating-particles" aria-hidden="true"></div>
+        
+        <div class="hero-container">
+            <!-- Hero Header - Above battle panels -->
+            <div class="hero-header">
+                <h1 class="hero-title">Code faster than your rival.<br>Win the match.</h1>
+                <p class="hero-subtitle">Choose DSA or CP → Set topics → Battle in &lt;60s</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Start a Practice Duel</a>
+                    <a href="#" class="btn btn-secondary">Watch a Live Match</a>
+                </div>
+            </div>
+
+            <!-- Battle Arena -->
+            <div class="battle-arena">
+                <!-- Left Coder Panel -->
+                <div class="code-panel">
+                    <div class="panel-header">
+                        <div class="coder-avatar">A</div>
+                        <div class="coder-info">
+                            <h3>Alex_Warrior</h3>
+                            <div class="coding-status">
+                                <div class="status-indicator"></div>
+                                <span>Coding intense...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-workspace">
+                        <div class="code-line" style="animation-delay: 0.5s;">
+                            <span class="syntax-keyword">def</span> <span class="syntax-function">longestCommonSubsequence</span>(<span class="syntax-variable">text1</span>, <span class="syntax-variable">text2</span>):
+                        </div>
+                        <div class="code-line" style="animation-delay: 1s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-variable">m</span>, <span class="syntax-variable">n</span> = <span class="syntax-function">len</span>(<span class="syntax-variable">text1</span>), <span class="syntax-function">len</span>(<span class="syntax-variable">text2</span>)
+                        </div>
+                        <div class="code-line" style="animation-delay: 1.5s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-variable">dp</span> = [[<span class="syntax-number">0</span>] * (<span class="syntax-variable">n</span> + <span class="syntax-number">1</span>) <span class="syntax-keyword">for</span> _ <span class="syntax-keyword">in</span> <span class="syntax-function">range</span>(<span class="syntax-variable">m</span> + <span class="syntax-number">1</span>)]
+                        </div>
+                        <div class="code-line" style="animation-delay: 2s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-keyword">for</span> <span class="syntax-variable">i</span> <span class="syntax-keyword">in</span> <span class="syntax-function">range</span>(<span class="syntax-number">1</span>, <span class="syntax-variable">m</span> + <span class="syntax-number">1</span>):
+                        </div>
+                        <div class="code-line" style="animation-delay: 2.5s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-keyword">for</span> <span class="syntax-variable">j</span> <span class="syntax-keyword">in</span> <span class="syntax-function">range</span>(<span class="syntax-number">1</span>, <span class="syntax-variable">n</span> + <span class="syntax-number">1</span>):
+                        </div>
+                        <div class="code-line" style="animation-delay: 3s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-keyword">if</span> <span class="syntax-variable">text1</span>[<span class="syntax-variable">i</span>-<span class="syntax-number">1</span>] == <span class="syntax-variable">text2</span>[<span class="syntax-variable">j</span>-<span class="syntax-number">1</span>]:
+                        </div>
+                        <div class="code-line" style="animation-delay: 3.5s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-variable">dp</span>[<span class="syntax-variable">i</span>][<span class="syntax-variable">j</span>] = <span class="syntax-variable">dp</span>[<span class="syntax-variable">i</span>-<span class="syntax-number">1</span>][<span class="syntax-variable">j</span>-<span class="syntax-number">1</span>] + <span class="syntax-number">1</span>
+                        </div>
+                        <div class="code-line" style="animation-delay: 4s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-keyword">else</span>:
+                        </div>
+                        <div class="code-line" style="animation-delay: 4.5s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-variable">dp</span>[<span class="syntax-variable">i</span>][<span class="syntax-variable">j</span>] = <span class="syntax-function">max</span>(<span class="syntax-variable">dp</span>[<span class="syntax-variable">i</span>-<span class="syntax-number">1</span>][<span class="syntax-variable">j</span>], <span class="syntax-variable">dp</span>[<span class="syntax-variable">i</span>][<span class="syntax-variable">j</span>-<span class="syntax-number">1</span>])
+                        </div>
+                        <div class="code-line" style="animation-delay: 5s;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-keyword">return</span> <span class="syntax-variable">dp</span>[<span class="syntax-variable">m</span>][<span class="syntax-variable">n</span>] <span class="typing-indicator"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VS Battle Center -->
+                <div class="vs-center">
+                    <div class="vs-emblem">
+                        <div class="battle-timer">2:47</div>
+                        VS
+                    </div>
+                    <div class="battle-metrics">
+                        <div class="metric">Speed: 102 WPM</div>
+                        <div class="metric">Precision: 96%</div>
+                    </div>
+                </div>
+
+                <!-- Right Coder Panel -->
+                <div class="code-panel">
+                    <div class="panel-header">
+                        <div class="coder-avatar">B</div>
+                        <div class="coder-info">
+                            <h3>Beta_Master</h3>
+                            <div class="coding-status">
+                                <div class="status-indicator"></div>
+                                <span>Testing solutions...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-workspace">
+                        <div class="terminal-output">
+                            <div class="test-result" style="animation-delay: 1s;">
+                                <span>$</span> python algorithm.py
+                            </div>
+                            <div class="test-result" style="animation-delay: 1.5s;">
+                                <i class="fas fa-check success-icon"></i>
+                                Test case 1... <span style="color: var(--matrix-green);">PASSED</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 2s;">
+                                <i class="fas fa-check success-icon"></i>
+                                Test case 2... <span style="color: var(--matrix-green);">PASSED</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 2.5s;">
+                                <i class="fas fa-check success-icon"></i>
+                                Test case 3... <span style="color: var(--matrix-green);">PASSED</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 3s;">
+                                <i class="fas fa-check success-icon"></i>
+                                Test case 4... <span style="color: var(--matrix-green);">PASSED</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 3.5s;">
+                                <i class="fas fa-check success-icon"></i>
+                                Test case 5... <span style="color: var(--matrix-green);">PASSED</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 4s;">
+                                <span style="color: var(--cyber-cyan);">All tests successful! Runtime: 0.028s</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 4.5s;">
+                                <span style="color: var(--cyber-cyan);">Memory usage: 14.7MB</span>
+                            </div>
+                            <div class="test-result" style="animation-delay: 5s;">
+                                <i class="fas fa-trophy" style="color: var(--gold-yellow);"></i>
+                                <span style="color: var(--matrix-green);">🎯 Solution accepted!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Features Preview -->
+            <div class="hero-features">
+                <div class="feature-badge">
+                    <i class="fas fa-zap"></i>
+                    <span>Lightning-fast Matching</span>
+                </div>
+                <div class="feature-badge">
+                    <i class="fas fa-globe"></i>
+                    <span>Worldwide Arena</span>
+                </div>
+                <div class="feature-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Real-time Leaderboards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Neural Network Section -->
+    <section class="workflow" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Neural Domination Protocol</h2>
+                <p class="section-description">Click on any neural node to unlock and explore advanced coding capabilities</p>
+                <div class="neural-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="neural-pulse"></div>
+                    </div>
+                    <span class="progress-text">0/5 Neural Nodes Available</span>
+                </div>
+            </div>
+            
+            <div class="neural-container">
+                <!-- Neural Network Background -->
+                <div class="neural-network-bg">
+                    <div class="matrix-rain"></div>
+                </div>
+                
+                <!-- Connection Lines SVG -->
+                <svg class="neural-connections" viewBox="0 0 1200 800">
+                    <defs>
+                        <pattern id="dots" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                            <circle cx="4" cy="4" r="1" fill="var(--matrix-green)" opacity="0.6"/>
+                        </pattern>
+                    </defs>
+                    <!-- Hub to Node connections -->
+                    <line class="connection-line" x1="600" y1="400" x2="600" y2="140" stroke="url(#dots)" stroke-width="2" opacity="0.4"/>
+                    <line class="connection-line" x1="600" y1="400" x2="900" y2="240" stroke="url(#dots)" stroke-width="2" opacity="0.4"/>
+                    <line class="connection-line" x1="600" y1="400" x2="900" y2="560" stroke="url(#dots)" stroke-width="2" opacity="0.4"/>
+                    <line class="connection-line" x1="600" y1="400" x2="300" y2="560" stroke="url(#dots)" stroke-width="2" opacity="0.4"/>
+                    <line class="connection-line" x1="600" y1="400" x2="300" y2="240" stroke="url(#dots)" stroke-width="2" opacity="0.4"/>
+                </svg>
+                
+                <!-- Central Brain Hub -->
+                <div class="neural-hub">
+                    <div class="brain-core">
+                        <div class="core-pulse"></div>
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>CodeVersus Neural Core</h3>
+                </div>
+
+                <!-- Enhanced Neural Nodes with Lock System -->
+                <div class="neural-node locked" data-step="1" data-position="top" data-color="crimson">
+                    <div class="node-lock">
+                        <div class="lock-matrix">
+                            <div class="matrix-overlay"></div>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="node-circle">
+                        <div class="node-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="node-glow"></div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Weapon Selection Matrix</h4>
+                        <p>Advanced arsenal selection system allowing strategic choice between Data Structures & Algorithms for foundational combat or Competitive Programming for elite tactical operations.</p>
+                    </div>
+                </div>
+
+                <div class="neural-node locked" data-step="2" data-position="top-right" data-color="azure">
+                    <div class="node-lock">
+                        <div class="lock-matrix">
+                            <div class="matrix-overlay"></div>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="node-circle">
+                        <div class="node-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <div class="node-glow"></div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Domain Targeting System</h4>
+                        <p>Precision-engineered topic selection interface covering Dynamic Programming mastery, Graph theory warfare, Array manipulation tactics, and Tree traversal strategies.</p>
+                    </div>
+                </div>
+
+                <div class="neural-node locked" data-step="3" data-position="bottom-right" data-color="emerald">
+                    <div class="node-lock">
+                        <div class="lock-matrix">
+                            <div class="matrix-overlay"></div>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="node-circle">
+                        <div class="node-icon">
+                            <i class="fas fa-users-line"></i>
+                        </div>
+                        <div class="node-glow"></div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Rival Matchmaking Engine</h4>
+                        <p>Sophisticated opponent pairing algorithm supporting private duels with friends or global matchmaking with skill-based ranking and compatibility analysis.</p>
+                    </div>
+                </div>
+
+                <div class="neural-node locked" data-step="4" data-position="bottom-left" data-color="violet">
+                    <div class="node-lock">
+                        <div class="lock-matrix">
+                            <div class="matrix-overlay"></div>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="node-circle">
+                        <div class="node-icon">
+                            <i class="fas fa-swords"></i>
+                        </div>
+                        <div class="node-glow"></div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Real-Time Battle Arena</h4>
+                        <p>High-performance IDE environment featuring real-time code execution, live result streaming, syntax highlighting, and intelligent auto-completion systems.</p>
+                    </div>
+                </div>
+
+                <div class="neural-node locked" data-step="5" data-position="top-left" data-color="amber">
+                    <div class="node-lock">
+                        <div class="lock-matrix">
+                            <div class="matrix-overlay"></div>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="node-circle">
+                        <div class="node-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="node-glow"></div>
+                    </div>
+                    <div class="node-info">
+                        <h4>Victory Achievement Core</h4>
+                        <p>Comprehensive victory tracking system with XP accumulation, prestigious badge unlocking, and dynamic leaderboard ranking across multiple skill categories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Weapon Cache Section -->
+    <section class="capabilities" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Weapon Cache</h2>
+                <p class="section-description">Advanced arsenal of tools and capabilities for dominating the competitive coding battlefield</p>
+            </div>
+            
+            <div class="weapons-grid">
+                <div class="weapon-card" data-weapon="ide">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Pro-Grade IDE</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Pro-Grade IDE Experience</h3>
+                                <p>Browser-native development environment featuring syntax highlighting, intelligent auto-completion, and instant code execution with live result streaming.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">Multi-language Support</span>
+                                    <span class="spec">Real-time Collaboration</span>
+                                    <span class="spec">Advanced Debugging</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weapon-card" data-weapon="speed">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Lightning Matchmaking</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Instant Matchmaking</h3>
+                                <p>Sub-3 second opponent pairing powered by WebSocket technology. Our global player pool ensures you'll always find a worthy challenger, any time of day.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">Global Player Pool</span>
+                                    <span class="spec">Skill-based Matching</span>
+                                    <span class="spec">Real-time Queuing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weapon-card" data-weapon="precision">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Precision Targeting</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Precision Filtering</h3>
+                                <p>Laser-focused topic selection including Dynamic Programming, Graph Algorithms, Tree Structures, Array Operations, plus our wildcard Random mode for the adventurous.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">Topic Specialization</span>
+                                    <span class="spec">Difficulty Scaling</span>
+                                    <span class="spec">Custom Challenges</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weapon-card" data-weapon="power">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3>Leaderboard Domination</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Dynamic Leaderboards</h3>
+                                <p>Real-time ranking updates across global, regional, and friend circles. Specialized leaderboards for each topic area to showcase your domain expertise.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">Global Rankings</span>
+                                    <span class="spec">Topic Leaderboards</span>
+                                    <span class="spec">Achievement System</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weapon-card" data-weapon="enhancement">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Gamification Engine</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Advanced Gamification</h3>
+                                <p>Tiered achievement system with exclusive badges, streak multipliers that amplify your XP gains, and milestone rewards that mark your coding journey.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">XP Multipliers</span>
+                                    <span class="spec">Badge Collection</span>
+                                    <span class="spec">Streak Rewards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weapon-card" data-weapon="intelligence">
+                    <div class="weapon-card-inner">
+                        <div class="weapon-card-front">
+                            <div class="weapon-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <h3>Analytics Dashboard</h3>
+                        </div>
+                        <div class="weapon-card-back">
+                            <div class="weapon-details">
+                                <h3>Advanced Analytics</h3>
+                                <p>Comprehensive battle analytics with performance heatmaps, detailed match replays, and strategic insights to identify your strengths and growth areas.</p>
+                                <div class="weapon-specs">
+                                    <span class="spec">Performance Metrics</span>
+                                    <span class="spec">Match Replays</span>
+                                    <span class="spec">Growth Insights</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Reviews Section -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Legend Chronicles</h2>
+                <p class="section-description">Discover how thousands of developers transformed their coding skills through competitive battles</p>
+            </div>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active" data-slide="0">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-badge">LEGEND</span>
+                            </div>
+                            <p class="testimonial-quote">"This platform revolutionized how I approach algorithmic thinking. The real-time pressure of battles improved my coding speed by 300% and made DSA practice genuinely addictive rather than tedious."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">AK</div>
+                                <div class="author-details">
+                                    <h4>Alex Kumar</h4>
+                                    <p>Senior Software Engineer @ Google 🇺🇸</p>
+                                    <div class="author-stats">
+                                        <span class="stat">1,247 Battles Won</span>
+                                        <span class="stat">Master Rank</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide" data-slide="1">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-badge">MASTER</span>
+                            </div>
+                            <p class="testimonial-quote">"The competitive programming battles here pushed my problem-solving abilities to new heights. Nothing compares to the adrenaline rush of solving complex algorithms under time pressure against skilled opponents."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">PS</div>
+                                <div class="author-details">
+                                    <h4>Priya Sharma</h4>
+                                    <p>Computer Science Student @ IIT Delhi 🇮🇳</p>
+                                    <div class="author-stats">
+                                        <span class="stat">892 Battles Won</span>
+                                        <span class="stat">Expert Rank</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide" data-slide="2">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-badge">CHAMPION</span>
+                            </div>
+                            <p class="testimonial-quote">"The topic-specific battles are brilliant for targeted skill development. My graph algorithm expertise improved dramatically after just one month of consistent battles. The gamification kept me engaged throughout."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">DL</div>
+                                <div class="author-details">
+                                    <h4>David Liu</h4>
+                                    <p>Full-Stack Developer @ Microsoft 🇨🇦</p>
+                                    <div class="author-stats">
+                                        <span class="stat">2,156 Battles Won</span>
+                                        <span class="stat">Grandmaster Rank</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="testimonial-navigation">
+                    <button class="nav-btn prev-btn" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="testimonial-indicators">
+                        <div class="indicator active" data-slide="0"></div>
+                        <div class="indicator" data-slide="1"></div>
+                        <div class="indicator" data-slide="2"></div>
+                    </div>
+                    
+                    <button class="nav-btn next-btn" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>CodeVersus</h3>
+                    <p class="footer-text">Pioneering the future of competitive programming through real-time battles, gamified learning experiences, and a thriving global community of code warriors. Join thousands of developers who are elevating their skills daily.</p>
+                    <div class="social-platform-links">
+                        <a href="#" class="social-platform" aria-label="Join our Discord community"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-platform" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-platform" aria-label="Check our GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-platform" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Join the Arena</h3>
+                    <p class="footer-text">Ready to test your coding mettle against the world's best? Enter our battle arena where algorithms meet adrenaline, and every line of code counts toward victory.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <nav class="footer-nav">
+                    <a href="#">Privacy & Security</a>
+                    <a href="#">Terms of Battle</a>
+                    <a href="#">Support Center</a>
+                    <a href="#">Developer API</a>
+                </nav>
+                <p>&copy; 2025 CodeVersus. All rights reserved. Crafting the ultimate competitive coding experience.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
